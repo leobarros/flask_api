@@ -1,6 +1,19 @@
 # Flask API
 Um exemplo simples de como utilizar uma api. Ideal para estudos e ensinar a sua utilização com os demais.
 
+# Rodando localmente
+
+Instale os módulos requeridos com pip
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 app.py
+```
+
+Acesse a API via navegador: http://localhost:5000/produtos
+
 # Utilizando o curl para gerenciar a API
 
 ## Listar produtos
