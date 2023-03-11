@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, g
+from flask import Flask, request, jsonify, g, redirect
 import sqlite3
 
 app = Flask(__name__)
@@ -22,6 +22,11 @@ def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
+
+# rota home
+@app.route('/')
+def home():
+    return redirect('/produtos', code=302)
 
 # listar todos os produtos
 @app.route('/produtos', methods=['GET'])
